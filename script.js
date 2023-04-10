@@ -1,4 +1,5 @@
 //COUNTDOWN
+
 const countdown = (num) => {
   let interval = setInterval(function() {
     num--;
@@ -13,7 +14,12 @@ const countdown = (num) => {
 
 countdown(5);
 
+
+
+
+
 //COUNTUP
+
 const countUp = (time) => {
   let timer = setInterval(function() {
     time++;
@@ -26,3 +32,24 @@ const countUp = (time) => {
 }
 
 countUp(0);
+
+
+
+
+
+// RANDOM GAME
+
+const randomGame = () => {
+  let tries = 0;
+  let timer = setInterval(function() {
+    let randomNumber = Math.random();
+    tries++;
+    if(randomNumber > .75) {
+      clearInterval(timer);
+      console.log(`It took ${tries} tries to get a random number higher than 0.75`)
+    }
+  },500)
+}
+
+
+randomGame();
